@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>У дяди Богдана</title>
+        <link rel="stylesheet" href="styles.css">
+        <link rel="icon" type="image/png" href="Картинки\Кабачок.png">
+        <link rel ="stylesheet" href = "style.css">
+    </head>
+    <body>
+        <header>
+            <h1 class = h>У дяди Богдана</h1>
+            <hr>
+            <nav>
+                <ul>
+                    <li><a href = about.html>О нас</a></li>
+                    <li><a href = index.html>Главная</a></li>
+                    <li><a href = menu.html>Наше меню</a></li>
+                    <li><a href = reviews.html>Отзывы</a></li>
+                    <li><a href = support.html>Поддержка</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h2>Связь с нами</h2>
+        <div class="contact-container">
+            <form class="contact-form" action="submit_form.php" method="POST">
+                <label for="name">Имя:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Электронная почта:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Сообщение:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+        <footer>
+            <hr>
+            <p class = footertext>
+                г. Дубайск, улица Виталия Цаля, д.14, к.1
+                <br>
+                ИП Цаль Б.Н. Никакие права не защищены.
+            </p>
+            
+        </footer>
+    </body>
+</html>
