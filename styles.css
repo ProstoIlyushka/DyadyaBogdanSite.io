@@ -10,16 +10,20 @@ body {
     line-height: 1.6;
     color: #5c4b3c;
     background-color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
 }
 
 /* Контейнер */
 .container {
-    max-width: 1200px;
+    min-height: calc(100vh - 400px);
+    padding: 60px 0 60px 0;
     margin: 0 auto;
-    padding: 20px 20px 40px;
-    background-color: #F5E6D3;
-    text-align: center;
-    flex: 1;
+    max-width: 1200px;
+    background-color: #fdf5e6;
 }
 
 .image-container {
@@ -44,7 +48,10 @@ body {
 
 @media screen and (max-width: 768px) {
     .container {
-        padding: 0 15px;
+        min-height: calc(100vh - 300px);
+        padding-bottom: 40px;
+        padding-left: 15px;
+        padding-right: 15px;
     }
 
     .image-container {
@@ -55,23 +62,36 @@ body {
 
 /* Шапка сайта */
 header {
-    background-color: #f5e6d3;
-    box-shadow: 0 2px 5px rgba(92,75,60,0.1);
-    position: fixed;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #e0e0e0;
     width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-nav {
-    padding-left: 2rem;
-    padding-right: 2rem;
 }
 
 .nav-menu {
+    background-color: #f5f5f5;
+    width: 100%;
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #fff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+}
+
+.cafe-name {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 30px;
 }
 
 .nav-links {
@@ -83,12 +103,13 @@ nav {
 }
 
 .nav-links a {
+    color: #333;
     text-decoration: none;
-    color: #000;
+    font-size: 16px;
 }
 
-.cafe-name {
-    margin-right: auto;
+.nav-links a:hover {
+    color: #666;
 }
 
 .mobile-menu {
@@ -130,16 +151,17 @@ nav {
     }
 }
 
-.logo {
-    height: 50px;
-    width: auto;
-}
-
-.logo img {
-    height: 50px;
-    width: auto;
-    transform: scale(2);
-    transform-origin: left center;
+/* Основной контент */
+.hero {
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #5c4b3c;
+    background-color: rgba(245,230,211,0.5);
 }
 
 .cafe-name {
@@ -376,7 +398,7 @@ header nav {
 }
 
 main {
-    margin-top: 80px;
+    margin-top: 0px;
     position: relative;
     z-index: 1;
 }
@@ -593,15 +615,115 @@ figcaption {
     }
 }
 
-.reviews-container {
-    max-width: 800px;
-    margin: 30px auto;
+/* Стили для фильтров */
+.filters-container {
+    padding: 20px;
+    background: white;
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.review-card {
-    background-color: #fff;
+.filter-group {
+    margin-bottom: 15px;
+}
+
+.filter-group h3 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.filter-btn {
+    padding: 8px 16px;
+    margin: 5px;
+    border: 2px solid #4a4a4a;
+    border-radius: 20px;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    color: #4a4a4a;
+}
+
+.filter-btn:hover {
+    background-color: #4a4a4a;
+    color: white;
+}
+
+.filter-btn.active {
+    background-color: #4a4a4a;
+    color: white;
+}
+
+/* Стили для отзывов */
+.reviews-container {
     padding: 20px;
-    margin-bottom: 20px;
+}
+
+.review-form {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+}
+
+.rating input {
+    display: none;
+}
+
+.rating label {
+    cursor: pointer;
+    font-size: 30px;
+    color: #ddd;
+    padding: 0 5px;
+}
+
+.rating input:checked ~ label,
+.rating label:hover,
+.rating label:hover ~ label {
+    color: #ffd700;
+}
+
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-item {
+    background: white;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
@@ -613,41 +735,128 @@ figcaption {
     margin-bottom: 10px;
 }
 
-.review-header h3 {
-    margin: 0;
+.review-header h4 {
     color: #333;
-}
-
-.review-date {
-    color: #666;
-    font-size: 0.9em;
+    font-size: 16px;
 }
 
 .review-rating {
     color: #ffd700;
-    margin-bottom: 10px;
-    font-size: 1.2em;
+    font-size: 18px;
 }
 
-.review-card p {
-    color: #444;
-    line-height: 1.6;
-    margin: 0;
+.review-date {
+    color: #666;
+    font-size: 14px;
+}
+
+.review-item p {
+    color: #4a4a4a;
+    line-height: 1.5;
+}
+
+button[type="submit"] {
+    background-color: #4a4a4a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #333;
+}
+
+/* Медиа-запросы для адаптивности */
+@media screen and (max-width: 768px) {
+    .filters-container {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        margin: 3px;
+        font-size: 13px;
+    }
+    
+    .review-form {
+        padding: 15px;
+    }
+    
+    .rating label {
+        font-size: 24px;
+    }
+}
+
+/* Стили для меню */
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: flex-start; /* Выравнивание по левому краю */
+}
+
+.menu-item {
+    flex: 0 0 calc(33.333% - 20px); /* Базовая ширина */
+    min-width: 280px; /* Минимальная ширина */
+    max-width: 350px; /* Максимальная ширина */
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Медиа-запросы */
+@media screen and (max-width: 992px) {
+    .menu-item {
+        flex: 0 0 calc(50% - 20px); /* 2 карточки в ряд */
+        max-width: 450px; /* Увеличиваем максимальную ширину для планшетов */
+    }
 }
 
 @media screen and (max-width: 768px) {
-    .review-card {
-        padding: 15px;
-        margin-bottom: 15px;
+    .menu-item {
+        flex: 0 0 100%; /* 1 карточка в ряд */
+        max-width: 500px; /* Максимальная ширина для мобильных */
     }
+}
 
-    .review-header {
+/* Стили для заголовков категорий */
+.category-header {
+    width: 100%;
+    flex-basis: 100%; /* Занимает всю ширину */
+    margin: 30px 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #4a4a4a;
+    color: #333;
+    font-size: 24px;
+}
+
+.menu-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: flex-start;
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media screen and (max-width: 768px) {
+    .nav-menu {
         flex-direction: column;
-        align-items: flex-start;
+        gap: 15px;
+        padding: 15px;
     }
 
-    .review-date {
-        margin-top: 5px;
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
     }
 }
 

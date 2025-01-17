@@ -1,12 +1,18 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Логируем получение данных
+    error_log("Получены данные отзыва: " . print_r($_POST, true));
+    
     // Получаем данные из формы
     $name = htmlspecialchars($_POST['name']);
     $rating = htmlspecialchars($_POST['rating']);
     $review = htmlspecialchars($_POST['review']);
     
     // Email администратора
-    $to = "ваша_реальная_почта@example.com";
+    $to = "zaiczevil32@gmail.com";
     
     // Тема письма
     $subject = "Новый отзыв на сайте";
@@ -25,21 +31,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // Отправляем письмо
     if(mail($to, $subject, $message, $headers)) {
-        // Успешная отправка
-        $response = [
-            "status" => "success",
-            "message" => "Спасибо за ваш отзыв! Он будет опубликован после модерации."
-        ];
+        error_log("Отзыв успешно отправлен");
+        echo json_encode(["status" => "success", "message" => "Отзыв отправлен"]);
     } else {
-        // Ошибка отправки
-        $response = [
-            "status" => "error",
-            "message" => "Произошла ошибка при отправке отзыва. Пожалуйста, попробуйте позже."
-        ];
+        error_log("Ошибка отправки отзыва");
+        echo json_encode(["status" => "error", "message" => "Ошибка отправки"]);
     }
-    
-    // Отправляем ответ в формате JSON
-    header('Content-Type: application/json');
-    echo json_encode($response);
 }
 ?> 

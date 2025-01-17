@@ -38,124 +38,144 @@
 
     <main>
         <div class="container">
-            <section class="menu-section">
-                <h2>Первые блюда</h2>
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Первые блюда/Борщ с говядиной.jpg" alt="Борщ с говядиной">
-                        <h3>Борщ с говядиной</h3>
-                        <p>Традиционный украинский борщ со сметаной</p>
-                        <span class="price">450 ₽</span>
-                    </div>
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Первые блюда/Гороховый суп.jpg" alt="Гороховый суп">
-                        <h3>Гороховый суп</h3>
-                        <p>Сытный суп из гороха с кусочками грудинки</p>
-                        <span class="price">500 ₽</span>
-                    </div>
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Первые блюда/Крем-суп из кабачков.jpg" alt="Крем-суп из кабачков">
-                        <h3>Крем-суп из кабачков</h3>
-                        <p>Легкий крем-суп из кабачков с сыром</p>
-                        <span class="price">350 ₽</span>
-                    </div>
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Первые блюда/Суп с говядиной и кабачками.jpg" alt="Суп с говядиной и кабачками">
-                        <h3>Суп с говядиной и кабачками</h3>
-                        <p>Сытный суп с говядиной и кабачками</p>
-                        <span class="price">450 ₽</span>
-                    </div>
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Первые блюда/Щи со свининой.jpg" alt="Щи со свининой">
-                        <h3>Щи со свининой</h3>
-                        <p>Классические русские щи из свежей капусты</p>
-                        <span class="price">450 ₽</span>
-                    </div>
-                </div>
-            </section>
+            <div class="text-container">
+                <h2>Меню</h2>
+            </div>
 
-            <section class="menu-section">
-                <h2>Вторые блюда</h2>
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Вторые блюда/Кабачковые оладьи.jpg" alt="Кабачковые оладьи">   
-                        <h3>Кабачковые оладьи</h3>
-                        <p>Легкие оладьи из кабачков с сыром</p>
-                        <span class="price">350 ₽</span>
-                    </div>
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Вторые блюда/Кабачковые рулеты с мясом.jpg" alt="Кабачковые рулеты с мясом">
-                        <h3>Кабачковые рулеты с мясом</h3>
-                        <p>Рулеты из кабачков с куриным фаршем</p>
-                        <span class="price">450 ₽</span>
-                    </div>
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Вторые блюда/Плов с кабачками.jpg" alt="Плов с кабачками">
-                        <h3>Плов с кабачками</h3>
-                        <p>Классический плов с кабачками и говядиной</p>
-                        <span class="price">450 ₽</span>
-                    </div>
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Вторые блюда/Стейк из говядины.jpg" alt="Стейк из говядины">
-                        <h3>Стейк из говядины</h3>
-                        <p>Традиционный стейк из говядины с соусом</p>
-                        <span class="price">550 ₽</span>
-                    </div>
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Вторые блюда/Стейк из куриного филе.jpg" alt="Стейк из куриного филе">
-                        <h3>Стейк из куриного филе</h3>
-                        <p>Традиционный стейк из куриного филе с соусом и картофелем фри</p>
-                        <span class="price">400 ₽</span>
-                    </div>
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Вторые блюда/Тефтели из свинины и кабачков с макаронами.jpg" alt="Тефтели из свинины и кабачков с макаронами">
-                        <h3>Тефтели из свинины и кабачков с макаронами</h3>
-                        <p>Тефтели из свинины и кабачков с макаронами и сыром</p>
-                        <span class="price">450 ₽</span>
-                    </div>
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Вторые блюда/Фаршированные кабачки.jpg" alt="Фаршированные кабачки">
-                        <h3>Фаршированные кабачки</h3>
-                        <p>Фаршированные кабачки с мясом, овощами и рисом</p>
-                        <span class="price">450 ₽</span>
-                    </div>
+            <!-- Фильтры -->
+            <div class="filters-container">
+                <div class="filter-group">
+                    <h3>Категория блюда:</h3>
+                    <button class="filter-btn active" data-filter="all">Все блюда</button>
+                    <button class="filter-btn" data-filter="first">Первые блюда</button>
+                    <button class="filter-btn" data-filter="second">Вторые блюда</button>
+                    <button class="filter-btn" data-filter="snack">Закуски</button>
                 </div>
-            </section>
 
-            <section class="menu-section">
-                <h2>Закуски</h2>
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Закуски/Бастурма из говядины.jpg" alt="Бастурма из говядины">
-                        <h3>Бастурма из говядины</h3>
-                        <p>Классическая бастурма из говядины</p>
-                        <span class="price">550 ₽</span>
-                    </div>
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Закуски/Гренки с соусом.jpg" alt="Гренки с соусом">
-                        <h3>Гренки с соусом</h3>
+                <div class="filter-group">
+                    <h3>Вид мяса:</h3>
+                    <button class="filter-btn" data-meat="all">Любое</button>
+                    <button class="filter-btn" data-meat="chicken">Курица</button>
+                    <button class="filter-btn" data-meat="pork">Свинина</button>
+                    <button class="filter-btn" data-meat="beef">Говядина</button>
+                    <button class="filter-btn" data-meat="fish">Рыба</button>
+                    <button class="filter-btn" data-meat="seafood">Морепродукты</button>
+                    <button class="filter-btn" data-meat="none">Без мяса</button>
+                </div>
+            </div>
+                
+            <div class="menu-container">
+                <!-- Первые блюда -->
+                <h2 class="category-header" data-category="first">Первые блюда</h2>
+                <div class="menu-item first meat-beef">
+                    <img src="Картинки/Блюда/Первые блюда/Борщ с говядиной.jpg" alt="Борщ с говядиной">
+                    <h3>Борщ с говядиной</h3>
+                    <p>Традиционный украинский борщ со сметаной</p>
+                    <span class="price">450 ₽</span>
+                </div>
+                <div class="menu-item first meat-pork">
+                    <img src="Картинки/Блюда/Первые блюда/Гороховый суп.jpg" alt="Гороховый суп">
+                    <h3>Гороховый суп</h3>
+                    <p>Сытный суп из гороха с кусочками грудинки</p>
+                    <span class="price">500 ₽</span>
+                </div>
+                <div class="menu-item first meat-none">
+                    <img src="Картинки/Блюда/Первые блюда/Крем-суп из кабачков.jpg" alt="Крем-суп из кабачков">
+                    <h3>Крем-суп из кабачков</h3>
+                    <p>Легкий крем-суп из кабачков с сыром</p>
+                    <span class="price">350 ₽</span>
+                </div>
+                <div class="menu-item first meat-beef">
+                    <img src="Картинки/Блюда/Первые блюда/Суп с говядиной и кабачками.jpg" alt="Суп с говядиной и кабачками">
+                    <h3>Суп с говядиной и кабачками</h3>
+                    <p>Сытный суп с говядиной и кабачками</p>
+                    <span class="price">450 ₽</span>
+                </div>
+                <div class="menu-item first meat-pork">
+                    <img src="Картинки/Блюда/Первые блюда/Щи со свининой.jpg" alt="Щи со свининой">
+                    <h3>Щи со свининой</h3>
+                    <p>Классические русские щи из свежей капусты</p>
+                    <span class="price">450 ₽</span>
+                </div>
+
+                
+                <h2 class="category-header" data-category="second">Вторые блюда</h2>
+                <div class="menu-item second meat-none">
+                    <img src="Картинки/Блюда/Вторые блюда/Кабачковые оладьи.jpg" alt="Кабачковые оладьи">   
+                    <h3>Кабачковые оладьи</h3>
+                    <p>Легкие оладьи из кабачков с сыром</p>
+                    <span class="price">350 ₽</span>
+                </div>
+                <div class="menu-item second meat-chicken">
+                    <img src="Картинки/Блюда/Вторые блюда/Кабачковые рулеты с мясом.jpg" alt="Кабачковые рулеты с мясом">
+                    <h3>Кабачковые рулеты с мясом</h3>
+                    <p>Рулеты из кабачков с куриным фаршем</p>
+                    <span class="price">450 ₽</span>
+                </div>
+                <div class="menu-item second meat-beef">
+                    <img src="Картинки/Блюда/Вторые блюда/Плов с кабачками.jpg" alt="Плов с кабачками">
+                    <h3>Плов с кабачками</h3>
+                    <p>Классический плов с кабачками и говядиной</p>
+                    <span class="price">450 ₽</span>
+                </div>
+                <div class="menu-item second meat-beef">
+                    <img src="Картинки/Блюда/Вторые блюда/Стейк из говядины.jpg" alt="Стейк из говядины">
+                    <h3>Стейк из говядины</h3>
+                    <p>Традиционный стейк из говядины с соусом</p>
+                    <span class="price">550 ₽</span>
+                </div>
+                <div class="menu-item second meat-chicken">
+                    <img src="Картинки/Блюда/Вторые блюда/Стейк из куриного филе.jpg" alt="Стейк из куриного филе">
+                    <h3>Стейк из куриного филе</h3>
+                    <p>Традиционный стейк из куриного филе с соусом и картофелем фри</p>
+                    <span class="price">400 ₽</span>
+                </div>
+                <div class="menu-item second meat-pork">
+                    <img src="Картинки/Блюда/Вторые блюда/Тефтели из свинины и кабачков с макаронами.jpg" alt="Тефтели из свинины и кабачков с макаронами">
+                    <h3>Тефтели из свинины и кабачков с макаронами</h3>
+                    <p>Тефтели из свинины и кабачков с макаронами и сыром</p>
+                    <span class="price">450 ₽</span>
+                </div>
+                <div class="menu-item second meat-chicken">
+                    <img src="Картинки/Блюда/Вторые блюда/Фаршированные кабачки.jpg" alt="Фаршированные кабачки">
+                    <h3>Фаршированные кабачки</h3>
+                    <p>Фаршированные кабачки с курицей, овощами и рисом</p>
+                    <span class="price">450 ₽</span>
+                </div>
+
+                <!-- Закуски -->
+                <h2 class="category-header" data-category="snack">Закуски</h2>
+                <div class="menu-item snack meat-beef">
+                    <img src="Картинки/Блюда/Закуски/Бастурма из говядины.jpg" alt="Бастурма из говядины">
+                    <h3>Бастурма из говядины</h3>
+                    <p>Классическая бастурма из говядины</p>
+                    <span class="price">550 ₽</span>
+                </div>
+                <div class="menu-item snack meat-none">
+                    <img src="Картинки/Блюда/Закуски/Гренки с соусом.jpg" alt="Гренки с соусом">
+                    <h3>Гренки с соусом</h3>
                         <p>Классические гренки из чёрного хлеба с соусом и зеленью</p>
-                        <span class="price">300 ₽</span>
-                    </div>
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Закуски/Кабачковые чипсы.jpg" alt="Кабачковые чипсы">
-                        <h3>Кабачковые чипсы</h3>
-                        <p>Чипсы из кабачков с приправми</p>
-                        <span class="price">300 ₽</span>
-                    </div>
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Закуски/Кальмары жареные.jpg" alt="Кальмары жареные">
-                        <h3>Кальмары жареные</h3>
-                        <p>Жаренные в панировке кальмары с соусом</p>
-                        <span class="price">400 ₽</span>
-                    </div>
-                    <div class="menu-item">
-                        <img src="Картинки/Блюда/Закуски/Луковые колечки жареные.jpg" alt="Луковые колечки жареные">
-                        <h3>Луковые колечки жареные</h3>
-                        <p>Жареные в панировке луковые колечки с соусом</p>
-                        <span class="price">300 ₽</span>
-                    </div>
-            </section>
+                    <span class="price">300 ₽</span>
+                </div>
+                <div class="menu-item snack meat-none">
+                    <img src="Картинки/Блюда/Закуски/Кабачковые чипсы.jpg" alt="Кабачковые чипсы">
+                    <h3>Кабачковые чипсы</h3>
+                    <p>Чипсы из кабачков с приправми</p>
+                    <span class="price">300 ₽</span>
+                </div>
+                <div class="menu-item snack meat-seafood">
+                    <img src="Картинки/Блюда/Закуски/Кальмары жареные.jpg" alt="Кальмары жареные">
+                    <h3>Кальмары жареные</h3>
+                    <p>Жаренные в панировке кальмары с соусом</p>
+                    <span class="price">400 ₽</span>
+                </div>
+                <div class="menu-item snack meat-none">
+                    <img src="Картинки/Блюда/Закуски/Луковые колечки жареные.jpg" alt="Луковые колечки жареные">
+                    <h3>Луковые колечки жареные</h3>
+                    <p>Жареные в панировке луковые колечки с соусом</p>
+                    <span class="price">300 ₽</span>
+                </div>
+            </div>
         </div>
     </main>
 
