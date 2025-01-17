@@ -1,0 +1,130 @@
+/*Поддержка*/
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>У дяди Богдана - Поддержка</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-menu">
+                <div class="logo" id="menuToggle">
+                    <a href="index.html">
+                        <img src="Картинки/Лого/logo.png" alt="Логотип ресторана">
+                    </a>
+                </div>
+                <div class="nav-links">
+                    <div class="cafe-name">У дяди Богдана</div>
+                    <a href="index.html">Главная</a>
+                    <a href="menu.html">Меню</a>
+                    <a href="about.html">О нас</a>
+                    <a href="reviews.html">Отзывы</a>
+                    <a href="support.html">Поддержка</a>
+                </div>
+                <div class="mobile-menu" id="mobileMenu">
+                    <div class="cafe-name">У дяди Богдана</div>
+                    <a href="index.html">Главная</a>
+                    <a href="menu.html">Меню</a>
+                    <a href="about.html">О нас</a>
+                    <a href="reviews.html">Отзывы</a>
+                    <a href="support.html">Поддержка</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="text-container">
+                <h2>Поддержка клиентов</h2>
+                <p>Мы всегда рады помочь вам и ответить на любые вопросы. Воспользуйтесь формой обратной связи или свяжитесь с нами любым удобным способом.</p>
+            </div>
+            
+            <div class="form-container">
+                <h3>Форма обратной связи</h3>
+                <form id="feedbackForm" action="send_mail.php" method="POST">
+                    <div class="form-group">
+                        <label for="name">Ваше имя:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Телефон:</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Тема обращения:</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Выберите тему</option>
+                            <option value="question">Вопрос</option>
+                            <option value="suggestion">Предложение</option>
+                            <option value="complaint">Жалоба</option>
+                            <option value="other">Другое</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Сообщение:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button">Отправить</button>
+                </form>
+            </div>
+
+            <div class="text-container">
+                <h3>Другие способы связи</h3>
+                <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+                <p>Email: info@uncle-bogdan.ru</p>
+                <p>Адрес: Молодёжная улица, 8, Соликамск</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Контакты</h3>
+                <p>Адрес: Молодёжная улица, 8, Соликамск</p>
+                <p>Телефон: +7 (XXX) XXX-XX-XX</p>
+                <p>Email: info@uncle-bogdan.ru</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Режим работы</h3>
+                <p>Понедельник - Четверг: 12:00 - 23:00</p>
+                <p>Пятница - Суббота: 12:00 - 00:00</p>
+                <p>Воскресенье: 12:00 - 23:00</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Социальные сети</h3>
+                <div class="social-links">
+                    <a href="#" target="_blank">
+                        <img src="Картинки/Иконки/vk.png" alt="ВКонтакте">
+                        ВКонтакте
+                    </a>
+                    <a href="#" target="_blank">
+                        <img src="Картинки/Иконки/telegram.png" alt="Telegram">
+                        Telegram
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Ресторан "У дяди Богдана". Все права защищены.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
